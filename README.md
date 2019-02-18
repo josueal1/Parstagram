@@ -26,3 +26,7 @@ Here's a walkthrough of implemented user stories:
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### Notes for Part I
+
+Getting started with this project was pretty obscure because I totally was unaware that we had to start from 'scratch'
+Also, it was pretty difficult to find this CodePath URL
+https://guides.codepath.com/ios/Configuring-a-Parse-Server#1-overview

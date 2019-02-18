@@ -113,14 +113,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="icz-23-K6Y">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="icz-23-K6Y">
                                 <rect key="frame" x="16" y="46" width="343" height="314"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PXJ-pd-CI3" appends="YES" id="rak-8a-KVh"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLV-rZ-0r7">
                                 <rect key="frame" x="151" y="476" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="C83-pZ-FAa" eventType="touchUpInside" id="MiH-Fp-s6J"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zjx-UL-hmp">
                                 <rect key="frame" x="16" y="424" width="343" height="30"/>
@@ -140,8 +147,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="59p-FT-mIf"/>
                     </view>
+                    <connections>
+                        <outlet property="commentField" destination="Zjx-UL-hmp" id="fZ5-Os-xuf"/>
+                        <outlet property="imageView" destination="icz-23-K6Y" id="woK-Wo-kwV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0e-iS-IBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PXJ-pd-CI3">
+                    <connections>
+                        <action selector="onCamera:" destination="C83-pZ-FAa" id="jzR-wL-JyT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2800.8000000000002" y="133.5832083958021"/>
         </scene>

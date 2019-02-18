@@ -12,18 +12,18 @@ The following **required** functionality is completed:
 - [x] User can sign up to create a new account. (1pt)
 - [x] User can log in. (1pt)
 - [x] User can take a photo, add a caption, and post it to the server. (3pt)
-- [ ] User can view the last 20 posts. (4pts)
+- [x] User can view the last 20 posts. (4pts)
 
 The following **bonus** features are implemented:
 
 - [ ] User can pull to refresh. (1pt)
-- [ ] User can load past tweets infinitely. (2pts)
+- [ ] User can load past posts infinitely. (2pts)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/ygy3vLdcPDgumYgZnC/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### Notes for Part I
 

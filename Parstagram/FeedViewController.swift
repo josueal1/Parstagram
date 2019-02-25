@@ -68,6 +68,27 @@ import Parse
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]
+        
+        let comment = PFObject(className: "Comments")
+        
+        comment["text"] = "This is random filler text"
+        comment["post"] = post
+        comment["author"] = PFUser.current()!
+        
+        post.add(comment, forKey: "comments")
+        
+        post.saveInBackground { (success, error) in
+            if success{
+                print("Successfully added comment")
+            }
+            else{
+                print("Error saving comment: \(error)")
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

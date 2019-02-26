@@ -32,7 +32,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                 print("Saved Image into DB!")
             }
             else{
-                print("Error: \(error?.localizedDescription)")
+                print("Error during saving post")
             }
         }
  
@@ -64,7 +64,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         let size = CGSize(width: 300, height: 300)
         
-        let scaledImage = image.af_imageScaled(to: size)
+        let scaledImage = image.af_imageAspectScaled(toFill: size)
         
         imageView.image = scaledImage
         
